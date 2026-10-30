@@ -848,9 +848,8 @@ export function initPortfolio() {
                     method: "POST",
                     headers: {
                         Accept: "application/json",
-                        "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({
+                    body: new URLSearchParams({
                         name,
                         email,
                         message,

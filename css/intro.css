@@ -1,0 +1,285 @@
+.intro {
+    position: relative;
+    height: 100vh;
+    height: 100svh;
+    background: var(--color-background);
+}
+
+.intro-stage {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
+    isolation: isolate;
+    background: #08090b;
+    touch-action: pan-x;
+}
+
+.intro-stage::before {
+    position: absolute;
+    z-index: 0;
+    inset: -2rem;
+    background:
+        linear-gradient(rgb(8 9 11 / 16%), rgb(8 9 11 / 16%)),
+        url("../assets/images/Setup.png") center 44% / cover no-repeat;
+    content: "";
+    filter: blur(18px) brightness(0.48) saturate(0.82);
+    transform: scale(1.06);
+}
+
+.intro-camera,
+.intro-parallax,
+.intro-image,
+.scene-lighting,
+.intro-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.intro-camera {
+    z-index: 1;
+    overflow: hidden;
+    transform: scale(1);
+    transform-origin: 50% 42%;
+    animation: camera-breathe 24s ease-in-out infinite alternate;
+    transition: transform 1350ms cubic-bezier(0.2, 0.78, 0.16, 1);
+    will-change: transform;
+}
+
+.intro-parallax {
+    inset: 0;
+}
+
+.intro-image {
+    display: block;
+    z-index: 0;
+    object-fit: cover;
+    object-position: center 44%;
+    filter: brightness(1.1) contrast(1.03) saturate(1.04);
+}
+
+.monitor-code-row {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    overflow: visible;
+    visibility: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1px 3px;
+    border-radius: 1px;
+    background: #091221;
+    color: #b0b2b4;
+    font-family: Consolas, monospace;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-shadow: 0 0 0.1em rgb(4 8 14 / 88%);
+    transform: rotate(var(--monitor-line-angle, -1.6deg));
+    transform-origin: left top;
+    pointer-events: none;
+}
+
+.monitor-code-title {
+    color: #286c95;
+    white-space: pre;
+}
+
+.monitor-code-subtitle {
+    color: #b0b2b4;
+    white-space: pre;
+}
+
+.monitor-code-cursor {
+    display: inline-block;
+    width: 0.1em;
+    min-width: 1px;
+    height: 1em;
+    margin-left: 0.08em;
+    background: currentColor;
+    vertical-align: -0.12em;
+    animation: editor-cursor-blink 1s steps(2, start) infinite;
+}
+
+.scene-lighting--monitors {
+    background:
+        radial-gradient(ellipse 17% 24% at 49% 42%, rgb(104 158 255 / 32%), transparent 100%),
+        radial-gradient(ellipse 14% 20% at 18% 41%, rgb(98 159 255 / 27%), transparent 100%),
+        radial-gradient(ellipse 13% 17% at 70% 52%, rgb(106 166 255 / 26%), transparent 100%),
+        radial-gradient(ellipse 18% 6% at 49% 78%, rgb(103 151 255 / 13%), transparent 100%),
+        radial-gradient(ellipse 12% 5% at 70% 79%, rgb(103 151 255 / 9%), transparent 100%);
+    opacity: 0.68;
+    animation: monitor-light 11s ease-in-out infinite alternate;
+}
+
+.scene-lighting--reflections {
+    background: radial-gradient(ellipse 16% 5% at 18% 78%, rgb(103 151 255 / 8%), transparent 100%);
+    opacity: 0.36;
+    animation: monitor-light 12s ease-in-out infinite alternate;
+}
+
+.scene-lighting {
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+.scene-lighting--warm {
+    background:
+        radial-gradient(ellipse 28% 11% at 22% 13%, rgb(255 174 91 / 15%), transparent 100%),
+        radial-gradient(ellipse 19% 8% at 50% 16%, rgb(255 189 112 / 10%), transparent 100%);
+    opacity: 0.38;
+    animation: ambient-light 13s ease-in-out infinite alternate;
+}
+
+.intro-overlay {
+    z-index: 2;
+    background:
+        linear-gradient(
+            180deg,
+            rgb(5 6 9 / 27%) 0%,
+            rgb(5 6 9 / 7%) 30%,
+            rgb(5 6 9 / 18%) 65%,
+            rgb(5 6 9 / 63%) 100%
+        ),
+        linear-gradient(90deg, rgb(5 6 9 / 17%), transparent 65%),
+        #08090b;
+    opacity: 0.32;
+    pointer-events: none;
+    transition: opacity 1100ms ease;
+}
+
+.scroll-indicator {
+    position: absolute;
+    z-index: 3;
+    bottom: max(clamp(3rem, 8vh, 5.5rem), env(safe-area-inset-bottom));
+    left: 50%;
+    display: grid;
+    height: 5.25rem;
+    align-content: start;
+    justify-items: center;
+    gap: 0.55rem;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    transition: opacity 240ms ease, color 220ms ease;
+}
+
+.scroll-indicator:hover {
+    color: #fff;
+}
+
+.scroll-indicator span:first-child {
+    padding: 0.85rem 1.2rem;
+    border: 1px solid rgb(255 255 255 / 48%);
+    border-radius: 999px;
+    background: rgb(5 7 10 / 72%);
+    box-shadow:
+        0 0 2.5rem rgb(255 255 255 / 18%),
+        0 0.5rem 2rem rgb(0 0 0 / 24%);
+    backdrop-filter: blur(14px);
+    text-shadow: 0 1px 8px rgb(0 0 0 / 80%);
+    animation: indicator-float 4s ease-in-out infinite;
+}
+
+.scroll-indicator__line {
+    width: 2px;
+    height: clamp(1.5rem, 4vh, 2.25rem);
+    border-radius: 2px;
+    background: linear-gradient(to bottom, #fff 0%, rgb(255 255 255 / 25%) 100%);
+    transform-origin: top;
+    animation: indicator-pulse 1.5s ease-in-out infinite;
+}
+
+.intro.is-entering .intro-stage {
+    pointer-events: none;
+}
+
+.intro.is-entering .intro-camera {
+    animation: none;
+    transform: scale(5);
+}
+
+.intro.is-entering .intro-overlay {
+    opacity: 1;
+}
+
+.intro.is-entering .scroll-indicator {
+    opacity: 0;
+}
+
+.intro.is-entered {
+    display: none;
+}
+
+@media (max-width: 1024px), (pointer: coarse), (any-pointer: coarse) {
+    .intro-stage::before {
+        display: none;
+    }
+
+    .intro-camera {
+        background: #08090b;
+    }
+
+    .scene-lighting {
+        display: none;
+    }
+
+    .intro-image {
+        background: #08090b;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .scroll-indicator {
+        bottom: max(2.25rem, env(safe-area-inset-bottom));
+        height: 5rem;
+        font-size: 0.64rem;
+        letter-spacing: 0.15em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .monitor-code-row {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .intro-camera,
+    .scene-lighting,
+    .intro-overlay {
+        transition: none;
+        animation: none;
+    }
+
+    .intro-camera {
+        transform: none;
+        will-change: auto;
+    }
+
+    .scene-lighting--warm,
+    .scene-lighting--monitors,
+    .scene-lighting--reflections {
+        will-change: auto;
+    }
+
+    .monitor-code-cursor {
+        animation: none;
+    }
+
+    .scroll-indicator span:first-child {
+        animation: none;
+    }
+}

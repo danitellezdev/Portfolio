@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#0e1419">
+        <meta
+            name="description"
+            content="Daniel Téllez — desarrollo web e interfaces digitales."
+            data-i18n-content="metaDescription"
+        >
+        <title>Daniel Téllez — Desarrollador web</title>
+        <link rel="preload" as="image" href="assets/images/Setup.png">
+        <link rel="stylesheet" href="css/main.css">
+        <script type="module" src="js/main.js"></script>
+    </head>
+    <body data-theme="dark">
+        <main>
+            <section class="intro" id="intro" aria-label="Introducción" data-i18n-aria="introLabel">
+                <div class="intro-stage">
+                    <div class="intro-camera" aria-hidden="true">
+                        <div class="intro-parallax">
+                            <img
+                                class="intro-image"
+                                src="assets/images/Setup.png"
+                                alt=""
+                                fetchpriority="high"
+                            >
+                            <div class="monitor-code-row" aria-hidden="true">
+                                <span class="monitor-code-title" data-typing-part></span><span class="monitor-code-subtitle" data-typing-part></span><span class="monitor-code-title" data-typing-part></span>
+                                <span class="monitor-code-cursor"></span>
+                            </div>
+                        </div>
+                        <div class="intro-overlay" aria-hidden="true"></div>
+                    </div>
+                    <div class="scene-lighting scene-lighting--warm" aria-hidden="true"></div>
+                    <div class="scene-lighting scene-lighting--monitors" aria-hidden="true"></div>
+                    <div class="scene-lighting scene-lighting--reflections" aria-hidden="true"></div>
+                    <a class="scroll-indicator" href="#portfolio">
+                        <span data-i18n="scrollPrompt">Desliza hacia arriba para continuar</span>
+                        <span class="scroll-indicator__line" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
+                <header class="site-header">
+                    <a class="wordmark" href="#intro" aria-label="Volver al inicio" data-i18n-aria="homeLabel">
+                        DT<span>.</span>
+                    </a>
+                    <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria="navLabel">
+                        <a href="#experiencia" data-i18n="navExperience">Experiencia</a>
+                        <a href="#proyectos" data-i18n="navProjects">Proyectos</a>
+                        <a href="#formacion" data-i18n="navEducation">Formación</a>
+                        <a href="#habilidades" data-i18n="navSkills">Habilidades</a>
+                        <a class="site-nav__contact" href="#contacto"><span data-i18n="navContact">Contacto</span> <span aria-hidden="true">↗</span></a>
+                    </nav>
+                    <div class="header-controls">
+                    <button class="language-toggle" type="button" aria-label="Cambiar idioma a inglés" data-i18n-aria="languageToggleLabel">
+                        <span class="language-toggle__label" aria-hidden="true">EN</span>
+                    </button>
+                    <span class="chain-slot" aria-hidden="true"></span>
+                    <button class="chain-handle" type="button" aria-label="Cambiar a tema claro">
+                        <span class="chain-handle__icon" aria-hidden="true">☾</span>
+                    </button>
+                    </div>
+                </header>
+
+                <div class="portfolio-content">
+                    <section class="portfolio-hero" aria-labelledby="portfolio-title">
+                        <div class="portfolio-hero__copy">
+                            <p class="eyebrow reveal"><span class="availability-dot"></span> <span data-i18n="heroEyebrow">Disponible</span></p>
+                            <h1 class="portfolio-title reveal" id="portfolio-title" tabindex="-1">
+                                <span data-i18n="heroName">Daniel Téllez</span>
+                            </h1>
+                            <p class="portfolio-hero__role reveal"><span data-i18n="heroRoleWeb">Desarrollador web</span> <span>+</span> <span data-i18n="heroRoleIT">profesional IT</span></p>
+                            <p class="portfolio-hero__description reveal" data-i18n="heroDescription">
+                                Me gusta construir productos digitales que sean útiles, claros y fáciles de usar. 
+                                Combino desarrollo web, creatividad y una curiosidad constante 
+                                por aprender y mejorar cada proyecto.
+                            </p>
+                            <div class="portfolio-hero__actions reveal">
+                                <a class="button button--primary" href="#proyectos"><span data-i18n="heroProjectsButton">Explorar proyectos</span> <span aria-hidden="true">↘</span></a>
+                                <a class="button button--secondary" href="#contacto"><span data-i18n="heroContactButton">Hablemos</span> <span aria-hidden="true">↗</span></a>
+                            </div>
+                            <p class="portfolio-hero__location reveal"><span aria-hidden="true">⌖</span> <span data-i18n="heroLocation">Modalidad de trabajo · Híbrido</span></p>
+                        </div>
+                        <div class="profile-visual reveal" role="img" aria-label="Retrato de Daniel Téllez" data-i18n-aria="profileImageLabel">
+                            <img class="profile-visual__photo" src="assets/images/Perfil1-sin-fondo.png" alt="">
+                            <span class="profile-visual__caption" data-i18n="profileCaption">CREATIVIDAD · TECNOLOGÍA · DISEÑO</span>
+                        </div>
+                    </section>
+
+                    <section class="content-section experience experience--connected" id="experiencia" aria-labelledby="experience-title">
+                        <div class="section-heading reveal">
+                            <div>
+                                <h2 id="experience-title" data-i18n="experienceTitle">Experiencia</h2>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <article class="timeline-entry reveal">
+                                <div class="timeline-entry__meta"><span data-i18n="experience1Date">2026 — Actualidad</span><span data-i18n="experience1Company">AmSpec Iberia · Los Barrios</span></div>
+                                <div class="timeline-entry__content">
+                                    <p class="timeline-entry__type" data-i18n="experience1Type">Sistemas e infraestructura</p>
+                                    <h3 data-i18n="experience1Role">Soporte IT y Automatización</h3>
+                                    <p data-i18n="experience1Description">Soporte técnico a usuarios y colaboración en proyectos de mejora tecnológica y automatización de procesos internos. Participación en la optimización de herramientas corporativas y resolución de incidencias en un entorno empresarial internacional.</p>
+                                    <div class="tag-list"><span data-i18n="tagAutomation">Automatización</span><span data-i18n="tagItSupport">Soporte IT</span><span data-i18n="tagProblemSolving">Resolución de problemas</span></div>
+                                </div>
+                            </article>
+                            <article class="timeline-entry reveal">
+                                <div class="timeline-entry__meta"><span data-i18n="experience2Date">2025 — Actualidad</span><span data-i18n="experience2Company">Decathlon · Los Barrios</span></div>
+                                <div class="timeline-entry__content">
+                                    <p class="timeline-entry__type" data-i18n="experience2Type">Soporte Técnico y Resolución de problemas</p>
+                                    <h3 data-i18n="experience2Role">Técnico taller</h3>
+                                    <p data-i18n="experience2Description">Responsable del diagnóstico, reparación y mantenimiento de productos deportivos, utilizando herramientas técnicas y digitales para la gestión de incidencias y el seguimiento de procesos. Esta experiencia reforzó mi capacidad de análisis, resolución de problemas y atención al detalle, habilidades que hoy aplico al desarrollo web y al soporte IT.</p>
+                                    <div class="tag-list"><span data-i18n="tagTroubleshooting">Diagnóstico de averías</span><span data-i18n="tagTechnicalSupport">Soporte técnico</span><span data-i18n="tagProblemSolving">Resolución de problemas</span></div>
+                                </div>
+                            </article>
+                            <article class="timeline-entry reveal">
+                                <div class="timeline-entry__meta"><span data-i18n="experience3Date">2023 — Actualidad</span><span data-i18n="experience3Company">Proyectos personales · Remoto</span></div>
+                                <div class="timeline-entry__content">
+                                    <p class="timeline-entry__type" data-i18n="experience3Type">Desarrollo web y soluciones digitales</p>
+                                    <h3 data-i18n="experience3Role">Desarrollador web</h3>
+                                    <p data-i18n="experience3Description">Desarrollo de aplicaciones web, herramientas digitales y proyectos tecnológicos propios utilizando tecnologías modernas, bases de datos, frameworks e inteligencia artificial. Desde la planificación hasta la implementación, combino desarrollo, diseño y resolución de problemas para crear soluciones funcionales, escalables y centradas en el usuario.</p>
+                                    <div class="tag-list"><span data-i18n="tagWebDevelopment">Desarrollo web</span><span data-i18n="tagDatabases">Bases de datos</span><span data-i18n="tagFrameworks">Frameworks</span><span data-i18n="tagAI">IA</span></div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="story" id="mas-alla" aria-labelledby="story-title">
+                        <div class="story-grid" data-story>
+                            <div class="story__line reveal" aria-hidden="true">
+                                <span class="story__path"></span>
+                                <span class="story__branch"></span>
+                                <span class="story__pulse story__pulse--vertical"><i></i></span>
+                                <span class="story__pulse story__pulse--horizontal"><i></i></span>
+                                <span class="story__node story__node--start"></span>
+                                <span class="story__node story__node--end"></span>
+                            </div>
+
+                            <div class="story__media reveal">
+                                <a class="story__portrait" href="https://danitellez.es" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-label="Retrato de Daniel Téllez. Visitar danitellez.es" data-i18n-aria="storyImageLabel">
+                                    <img src="assets/images/danitellez.jpg" alt="" width="1371" height="1920" loading="lazy" decoding="async">
+                                    <span class="story__chip" aria-hidden="true">danitellez.es <span>↗</span></span>
+                                </a>
+                            </div>
+
+                            <div class="story__aside reveal">
+                                <article class="story-card">
+                                    <h2 id="story-title" data-i18n="storyTitle">Más allá del código</h2>
+                                    <p class="story-card__lead" data-i18n="storyText1">Más allá de la tecnología, llevo más de una década vinculado al mundo de la interpretación y los proyectos creativos. Esta experiencia me ha ayudado a desarrollar habilidades de comunicación, trabajo en equipo, adaptación y confianza para afrontar nuevos retos.</p>
+                                    <p data-i18n="storyText2">La creatividad siempre ha sido una parte importante de mi trayectoria. Hoy aplico esa misma creatividad al desarrollo web, combinando tecnología, diseño y resolución de problemas para construir experiencias digitales con personalidad propia.</p>
+                                    <p class="story-card__footer">
+                                        <span data-i18n="storyFooter">Explora algunos de mis proyectos artísticos en</span>
+                                        <a class="story-card__link" href="https://danitellez.es" target="_blank" rel="noopener noreferrer" aria-label="danitellez.es (se abre en una pestaña nueva)" data-i18n-aria="storyLinkLabel">danitellez.es <span aria-hidden="true">↗</span></a>
+                                    </p>
+                                </article>
+
+                                <a class="story-preview" href="https://danitellez.es" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+                                    <div class="story-preview__chrome">
+                                        <span class="story-preview__dots"><i></i><i></i><i></i></span>
+                                        <span class="story-preview__url">
+                                            <svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="10" height="7" rx="1.6"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg>
+                                            danitellez.es
+                                        </span>
+                                    </div>
+                                    <div class="story-preview__viewport">
+                                        <div class="mock-page">
+                                            <div class="mock-nav">
+                                                <b class="mock-nav__brand">DANI <em>TÉLLEZ</em></b>
+                                                <div class="mock-nav__links"><span>Filmografía</span><span>Book</span><span>Videobook</span><span>Prensa</span><span class="mock-nav__cta">Contacto ↗</span></div>
+                                            </div>
+                                            <div class="mock-hero"><img src="assets/images/danitellez.jpg" alt="" loading="lazy" decoding="async"></div>
+                                            <div class="mock-featured">
+                                                <small>Una selección de trabajos</small>
+                                                <strong>Proyectos destacados</strong>
+                                                <div class="mock-featured__row">
+                                                    <div class="mock-thumb mock-thumb--a"></div>
+                                                    <div class="mock-copy"><small>Cine</small><b>“Federico García Lorca”</b><span>Antonia</span></div>
+                                                </div>
+                                                <div class="mock-featured__row mock-featured__row--reverse">
+                                                    <div class="mock-thumb mock-thumb--b"></div>
+                                                    <div class="mock-copy"><small>Televisión</small><b>“Rober”</b><span>Cuando nadie nos ve</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section projects" id="proyectos" aria-labelledby="projects-title">
+                        <div class="section-heading reveal">
+                            <div>
+                                <h2 id="projects-title" data-i18n="projectsTitle">Proyectos destacados</h2>
+                            </div>
+                        </div>
+                        <div class="project-archive is-stacked" data-project-archive>
+                        <div class="project-grid" data-project-archive-grid>
+                            <article class="project-card reveal">
+                                <div class="project-art project-art--backup">
+                                    <span class="project-art__label">BACKUP-MONITOR / 01</span>
+                                    <img
+                                        class="project-art__image"
+                                        src="assets/images/backup/Tarjeta backup.png"
+                                        alt="Panel de Backup Monitor con copias operativas, advertencias y errores"
+                                    >
+                                </div>
+                                <div class="project-card__body">
+                                    <p class="project-card__type" data-i18n="project1Type">Automatización y monitorización</p>
+                                    <h3 data-i18n="project1Title">Backup Monitor</h3>
+                                    <p data-i18n="project1Description">Sistema de monitorización diseñado para ofrecer visibilidad completa sobre las copias de seguridad de los laboratorios. Automatiza la recopilación de datos, clasifica estados de funcionamiento, genera informes Excel y proporciona un panel web centralizado para detectar incidencias de forma rápida y eficiente.</p>
+                                    <div class="tag-list"><span>Python</span><span>PowerShell</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>JSON</span><span>Excel</span></div>
+                                    <a class="project-link" href="assets/images/backup/completa_backup.png" data-project-preview data-project-gallery="backup" aria-haspopup="dialog"><span data-i18n="projectLink">Ver proyecto</span> <span aria-hidden="true">↗</span></a>
+                                </div>
+                            </article>
+                            <article class="project-card reveal">
+                                <div class="project-art project-art--personal">
+                                    <span class="project-art__label">DANI TELLEZ / 02</span>
+                                    <img
+                                        class="project-art__image--personal"
+                                        src="assets/images/danitellez.es/tarjeta_danitellez.es.png"
+                                        alt="Retrato de Dani Téllez en la página de inicio de su portfolio artístico"
+                                        data-i18n-aria="project2ImageAlt"
+                                    >
+                                </div>
+                                <div class="project-card__body">
+                                    <p class="project-card__type" data-i18n="project2Type">Diseño web y marca personal</p>
+                                    <h3 data-i18n="project2Title">Danitellez.es</h3>
+                                    <p data-i18n="project2Description">Sitio web profesional desarrollado para presentar la trayectoria artística y audiovisual de Dani Téllez. Diseñado como portfolio digital, reúne biografía, filmografía, book fotográfico, videobook, apariciones en medios y vías de contacto en una experiencia visual moderna, accesible y optimizada para cualquier dispositivo.</p>
+                                    <div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SEO</span><span data-i18n="project2Accessibility">Accesibilidad</span><span data-i18n="project2Responsive">Responsive Design</span></div>
+                                    <div class="project-card__actions">
+                                        <a class="project-link" href="assets/images/danitellez.es/danitellez.es_.png" data-project-preview data-project-gallery="danitellez" aria-haspopup="dialog"><span data-i18n="projectLink">Ver proyecto</span> <span aria-hidden="true">↗</span></a>
+                                        <a class="project-link" href="https://danitellez.es/" target="_blank" rel="noopener noreferrer"><span data-i18n="projectWebsiteLink">Ver sitio</span> <span aria-hidden="true">↗</span></a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="project-card project-card--liberarte reveal">
+                                <div class="project-art project-art--liberarte">
+                                    <span class="project-art__label">LIBERARTE / 03</span>
+                                    <img
+                                        class="project-art__image project-art__image--liberarte"
+                                        src="assets/images/liberarte/liberarte tarjeta .png"
+                                        alt="Vista de la plataforma LiberArte para la gestión de actividades artísticas infantiles"
+                                    >
+                                </div>
+                                <div class="project-card__body">
+                                    <p class="project-card__type" data-i18n="project3Type">APLICACIÓN WEB FULL STACK</p>
+                                    <h3 data-i18n="project3Title">LiberArte</h3>
+                                    <p data-i18n="project3Description">Aplicación web desarrollada para digitalizar y centralizar la gestión de un centro infantil de actividades artísticas. Incorpora distintos niveles de acceso, paneles personalizados y una arquitectura basada en API que conecta una interfaz moderna con un sistema de gestión completo para administradores, empleados y tutores.</p>
+                                    <div class="tag-list"><span>Laravel</span><span>PHP</span><span>React</span><span>MySQL</span><span>Vite</span><span>API REST</span></div>
+                                    <a class="project-link" href="assets/images/liberarte/localhost_5173_.png" data-project-preview data-project-gallery="liberarte" aria-haspopup="dialog"><span data-i18n="projectLink">Ver proyecto</span> <span aria-hidden="true">↗</span></a>
+                                </div>
+                            </article>
+                            <article class="project-card reveal">
+                                <div class="project-art project-art--verbquest">
+                                    <span class="project-art__label">VERBQUEST / 04</span>
+                                    <img
+                                        class="project-art__image project-art__image--verbquest"
+                                        src="assets/images/verbquest/tarjeta_verbQuest.png"
+                                        alt="Tarjeta de presentación de la plataforma educativa VerbQuest"
+                                    >
+                                </div>
+                                <div class="project-card__body">
+                                    <p class="project-card__type" data-i18n="project4Type">APLICACIÓN WEB EDUCATIVA</p>
+                                    <h3 data-i18n="project4Title">VerbQuest</h3>
+                                    <p data-i18n="project4Description">Plataforma educativa desarrollada para facilitar el aprendizaje del inglés mediante ejercicios interactivos, seguimiento del progreso y mecánicas de gamificación. El proyecto incorpora prácticas de verbos y tiempos verbales, interfaz bilingüe y almacenamiento local para ofrecer una experiencia personalizada sin necesidad de registro.</p>
+                                    <div class="tag-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Node.js</span><span>GitHub Pages</span><span>DeepL API</span></div>
+                                    <div class="project-card__actions">
+                                        <a class="project-link" href="assets/images/verbquest/dominaverbos.png" data-project-preview data-project-gallery="verbquest" aria-haspopup="dialog"><span data-i18n="projectLink">Ver proyecto</span> <span aria-hidden="true">↗</span></a>
+                                        <a class="project-link" href="https://danitellezdev.github.io/VerbQuest/" target="_blank" rel="noopener noreferrer"><span data-i18n="projectWebsiteLink">Ver sitio</span> <span aria-hidden="true">↗</span></a>
+                                    </div>
+                                </div>
+                            </article>
+                            <button class="archive-tab archive-tab--close" type="button" aria-label="Cerrar el archivador de proyectos" data-i18n-aria="archiveCloseLabel" data-archive-close>
+                                <span class="archive-tab__arrow" aria-hidden="true">←</span>
+                                <span class="archive-tab__text" data-i18n="archiveClose">Cerrar</span>
+                            </button>
+                        </div>
+                        <button class="archive-tab archive-tab--open" type="button" aria-label="Desplegar el archivador de proyectos" data-i18n-aria="archiveOpenLabel" aria-expanded="false" data-archive-open>
+                            <span class="archive-tab__text" data-i18n="archiveOpen">Deslizar</span>
+                            <span class="archive-tab__arrow" aria-hidden="true">→</span>
+                        </button>
+                        </div>
+                    </section>
+
+                    <section class="content-section education" id="formacion" aria-labelledby="education-title">
+                        <div class="section-heading reveal">
+                            <div>
+                                <h2 id="education-title" data-i18n="educationTitle">Formación y Certificaciones</h2>
+                            </div>
+                        </div>
+
+                        <div class="education-groups">
+                            <div class="education-group">
+                                <h3 class="education-group__title" data-i18n="educationAcademicTitle">Formación académica</h3>
+                                <div class="education-grid education-grid--academic">
+                                    <article class="education-card education-card--full-description reveal">
+                                        <div class="education-card__top">
+                                            <span class="education-card__icon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="m2.5 9 9.5-5 9.5 5-9.5 5-9.5-5Z"/>
+                                                    <path d="M6 11v5.1c3.4 2.6 8.6 2.6 12 0V11"/>
+                                                    <path d="M21.5 9v6"/>
+                                                </svg>
+                                            </span>
+                                            <span class="education-card__status">
+                                                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3.5 8.2 2.8 2.8 6.2-6.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                <span data-i18n="educationFinished">Finalizado</span>
+                                            </span>
+                                        </div>
+                                        <p class="education-card__institution">Ilerna</p>
+                                        <h4 data-i18n="educationDawTitle">Desarrollo de Aplicaciones Web (DAW)</h4>
+                                        <p class="education-card__description" data-i18n="educationDawDescription">Formación orientada al desarrollo de soluciones web modernas, combinando programación, bases de datos, diseño de interfaces y metodologías de desarrollo para crear aplicaciones funcionales y escalables.</p>
+                                    </article>
+
+                                </div>
+                            </div>
+
+                            <div class="education-group">
+                                <h3 class="education-group__title" data-i18n="educationComplementaryTitle">Formación complementaria</h3>
+                                <div class="education-grid education-grid--complementary">
+                                    <article class="education-card education-card--full-description reveal">
+                                        <div class="education-card__top">
+                                            <span class="education-card__icon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                                    <rect x="4" y="3" width="16" height="14" rx="2"/>
+                                                    <path d="M8 7h8M8 10.5h8"/>
+                                                    <circle cx="12" cy="14" r="1.5"/>
+                                                    <path d="m10.5 16.5-1 4 2.5-1.5 2.5 1.5-1-4"/>
+                                                </svg>
+                                            </span>
+                                            <span class="education-card__status">
+                                                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3.5 8.2 2.8 2.8 6.2-6.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                <span data-i18n="educationCompleted">Completado</span>
+                                            </span>
+                                        </div>
+                                        <p class="education-card__institution">Udemy</p>
+                                        <h4 data-i18n="educationJavascriptTitle">Máster en JavaScript y Desarrollo Web Full-Stack</h4>
+                                        <p class="education-card__description" data-i18n="educationJavascriptDescription">Especialización en desarrollo web Full Stack mediante tecnologías modernas del ecosistema JavaScript, abordando tanto el desarrollo frontend como backend y la creación de aplicaciones completas.</p>
+                                    </article>
+
+                                    <article class="education-card reveal">
+                                        <div class="education-card__top">
+                                            <span class="education-card__icon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                                    <rect x="4" y="3" width="16" height="14" rx="2"/>
+                                                    <path d="M8 7h8M8 10.5h8"/>
+                                                    <circle cx="12" cy="14" r="1.5"/>
+                                                    <path d="m10.5 16.5-1 4 2.5-1.5 2.5 1.5-1-4"/>
+                                                </svg>
+                                            </span>
+                                            <span class="education-card__status">
+                                                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3.5 8.2 2.8 2.8 6.2-6.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                <span data-i18n="educationCompleted">Completado</span>
+                                            </span>
+                                        </div>
+                                        <p class="education-card__institution">Udemy</p>
+                                        <h4 data-i18n="educationFullStackTitle">Curso de Programación Web Full-Stack</h4>
+                                        <p class="education-card__description education-card__description--full" data-i18n="educationFullStackDescription">Formación práctica en desarrollo web completo, trabajando la comunicación entre cliente y servidor, bases de datos y la construcción de aplicaciones dinámicas.</p>
+                                    </article>
+
+                                    <article class="education-card reveal">
+                                        <div class="education-card__top">
+                                            <span class="education-card__icon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                                    <rect x="4" y="3" width="16" height="14" rx="2"/>
+                                                    <path d="M8 7h8M8 10.5h8"/>
+                                                    <circle cx="12" cy="14" r="1.5"/>
+                                                    <path d="m10.5 16.5-1 4 2.5-1.5 2.5 1.5-1-4"/>
+                                                </svg>
+                                            </span>
+                                            <span class="education-card__status">
+                                                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3.5 8.2 2.8 2.8 6.2-6.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                <span data-i18n="educationCompleted">Completado</span>
+                                            </span>
+                                        </div>
+                                        <p class="education-card__institution">Udemy</p>
+                                        <h4 data-i18n="educationJavaTitle">Curso de Programación en Java</h4>
+                                        <p class="education-card__description education-card__description--full" data-i18n="educationJavaDescription">Formación en fundamentos de Java, programación orientada a objetos, estructuras de datos y buenas prácticas para el desarrollo de aplicaciones.</p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section skills" id="habilidades" aria-labelledby="skills-title">
+                        <div class="section-heading reveal">
+                            <div>
+                                <h2 id="skills-title" data-i18n="skillsTitle">Tecnologías y competencias</h2>
+                            </div>
+                        </div>
+                        <div class="skill-grid">
+                            <article class="skill-card reveal">
+                                <div class="skill-card__heading">
+                                    <span class="skill-card__icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="3" y="4" width="18" height="16" rx="2"/>
+                                            <path d="M3 8h18M8 4v4m1 4-2 2 2 2m6-4 2 2-2 2m-2.5-5-1 6"/>
+                                        </svg>
+                                    </span>
+                                    <h3>Frontend</h3>
+                                </div>
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>JavaScript</li>
+                                    <li>React</li>
+                                    <li data-i18n="skillResponsive">Diseño responsive</li>
+                                    <li data-i18n="skillAccessibility">Accesibilidad web</li>
+                                </ul>
+                            </article>
+                            <article class="skill-card reveal">
+                                <div class="skill-card__heading">
+                                    <span class="skill-card__icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                            <ellipse cx="12" cy="5" rx="8" ry="3"/>
+                                            <path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>
+                                        </svg>
+                                    </span>
+                                    <h3>Backend</h3>
+                                </div>
+                                <ul>
+                                    <li>PHP</li>
+                                    <li>Laravel</li>
+                                    <li>Node.js</li>
+                                    <li>MySQL</li>
+                                    <li data-i18n="skillRestApis">APIs REST</li>
+                                    <li data-i18n="skillAuthPermissions">Autenticación y permisos</li>
+                                </ul>
+                            </article>
+                            <article class="skill-card reveal">
+                                <div class="skill-card__heading">
+                                    <span class="skill-card__icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="3" y="4" width="18" height="16" rx="2"/>
+                                            <path d="m7 10 2 2-2 2m5 0h5"/>
+                                        </svg>
+                                    </span>
+                                    <h3 data-i18n="skillsTools">Herramientas</h3>
+                                </div>
+                                <ul>
+                                    <li>Git &amp; GitHub</li>
+                                    <li data-i18n="skillVisualStudioCode">Visual Studio Code</li>
+                                    <li>Eclipse</li>
+                                    <li>Figma</li>
+                                    <li>Vite</li>
+                                    <li data-i18n="skillWebDeployment">Despliegue web</li>
+                                </ul>
+                            </article>
+                            <article class="skill-card reveal">
+                                <div class="skill-card__heading">
+                                    <span class="skill-card__icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="5" r="2.5"/>
+                                            <circle cx="5" cy="19" r="2.5"/>
+                                            <circle cx="19" cy="19" r="2.5"/>
+                                            <path d="m10.8 7.2-4.6 9.6m7-9.6 4.6 9.6M7.5 19h9"/>
+                                        </svg>
+                                    </span>
+                                    <h3 data-i18n="skillsInfrastructure">IT e infraestructura</h3>
+                                </div>
+                                <ul>
+                                    <li>Microsoft 365</li>
+                                    <li>Windows</li>
+                                    <li data-i18n="skillItSupport">Soporte IT</li>
+                                    <li data-i18n="skillAutomation">Automatización</li>
+                                    <li data-i18n="skillNetworks">Redes</li>
+                                    <li>Azure Fundamentals</li>
+                                </ul>
+                            </article>
+                            <article class="skill-card reveal">
+                                <div class="skill-card__heading">
+                                    <span class="skill-card__icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 3v4m0 10v4M3 12h4m10 0h4M5.6 5.6l2.8 2.8m7.2 7.2 2.8 2.8m0-12.8-2.8 2.8m-7.2 7.2-2.8 2.8"/>
+                                            <circle cx="12" cy="12" r="3"/>
+                                        </svg>
+                                    </span>
+                                    <h3 data-i18n="skillsAi">Inteligencia Artificial</h3>
+                                </div>
+                                <ul>
+                                    <li>Microsoft Copilot</li>
+                                    <li>GitHub Copilot</li>
+                                    <li>Prompt Engineering</li>
+                                    <li data-i18n="skillAiAutomation">Automatización con IA</li>
+                                    <li data-i18n="skillContentGeneration">Generación de Contenido</li>
+                                    <li data-i18n="skillDevelopmentAssistance">Asistencia al Desarrollo</li>
+                                </ul>
+                            </article>
+                            <article class="skill-card reveal">
+                                <div class="skill-card__heading">
+                                    <span class="skill-card__icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="9"/>
+                                            <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/>
+                                        </svg>
+                                    </span>
+                                    <h3 data-i18n="skillsLanguages">Idiomas</h3>
+                                </div>
+                                <ul>
+                                    <li data-i18n="skillSpanishNative">Español (Nativo)</li>
+                                    <li data-i18n="skillEnglishB1">Inglés (B1)</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="content-section contact" id="contacto" aria-labelledby="contact-title">
+                        <div class="section-heading reveal">
+                            <div>
+                                <h2 id="contact-title" data-i18n="contactTitle">¿Tienes algo en mente?</h2>
+                            </div>
+                        </div>
+                        <div class="contact-grid">
+                            <form class="contact-form reveal" action="https://formsubmit.co/ajax/danitellez.dev@gmail.com" method="POST" data-contact-form>
+                                <label for="contact-name" data-i18n="formName">Nombre</label>
+                                <input id="contact-name" name="name" autocomplete="name" placeholder="Tu nombre" data-i18n-placeholder="formNamePlaceholder" required>
+                                <label for="contact-email" data-i18n="formEmail">Email</label>
+                                <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="tu@email.com" data-i18n-placeholder="formEmailPlaceholder" required>
+                                <label for="contact-message" data-i18n="formMessage">Mensaje</label>
+                                <textarea id="contact-message" name="message" rows="4" placeholder="Cuéntame un poco sobre tu proyecto..." data-i18n-placeholder="formMessagePlaceholder" required></textarea>
+                                <div class="contact-form__honeypot" aria-hidden="true">
+                                    <label for="contact-website">Leave this field empty</label>
+                                    <input id="contact-website" name="_honey" type="text" tabindex="-1" autocomplete="off">
+                                </div>
+                                <button class="button button--primary contact-form__submit" type="submit"><span data-i18n="formSubmit">Enviar mensaje</span> <span aria-hidden="true">↗</span></button>
+                                <p class="contact-form__status" data-contact-status aria-live="polite"></p>
+                            </form>
+                            <aside class="contact-card reveal" aria-label="Información de contacto" data-i18n-aria="contactInfoLabel">
+                                <p class="eyebrow" data-i18n="contactSocialEyebrow">También puedes encontrarme en</p>
+                                <a class="contact-card__link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><span data-i18n="linkedinPlaceholder">LinkedIn · añadir perfil</span> <span aria-hidden="true">↗</span></a>
+                                <a class="contact-card__link" href="https://github.com/" target="_blank" rel="noreferrer"><span data-i18n="githubPlaceholder">GitHub · añadir perfil</span> <span aria-hidden="true">↗</span></a>
+                                <a class="contact-card__link" href="mailto:danitellez.dev@gmail.com">danitellez.dev@gmail.com <span aria-hidden="true">↗</span></a>
+                                <div class="contact-card__footer">
+                                    <span data-i18n="cvPrompt">¿Quieres conocer más?</span>
+                                    <button class="button button--secondary" type="button" disabled aria-describedby="cv-note"><span data-i18n="cvDownload">Descargar CV</span> <span aria-hidden="true">↓</span></button>
+                                    <small id="cv-note" data-i18n="cvNote">CV disponible próximamente</small>
+                                </div>
+                            </aside>
+                        </div>
+                    </section>
+
+                    <footer class="site-footer">
+                        <a class="wordmark" href="#portfolio" aria-label="Volver arriba" data-i18n-aria="backToTopLabel">DT<span>.</span></a>
+                        <p><span data-i18n="footerCredit">Diseñado y construido con intención</span> <span>·</span> © <span data-current-year>2026</span> Daniel Téllez</p>
+                        <a href="#intro"><span data-i18n="footerBackToTop">Volver al inicio</span> ↑</a>
+                    </footer>
+                </div>
+            </section>
+        </main>
+        <dialog class="project-preview" data-project-preview-dialog aria-label="Vista previa del proyecto" data-i18n-aria="projectPreviewLabel">
+            <div class="project-preview__toolbar">
+                <button class="project-preview__zoom" type="button" aria-label="Ampliar imagen" aria-pressed="false" data-i18n-aria="projectPreviewZoomIn" data-project-preview-zoom>+zoom</button>
+                <button class="project-preview__close" type="button" aria-label="Cerrar vista previa" data-i18n-aria="projectPreviewClose" data-project-preview-close>×</button>
+            </div>
+            <div class="project-preview__stage">
+                <button class="project-preview__nav project-preview__nav--previous" type="button" aria-label="Foto anterior" data-i18n-aria="projectPreviewPrevious" data-project-preview-previous hidden>‹</button>
+                <img
+                    class="project-preview__image"
+                    src="assets/images/backup/completa_backup.png"
+                    alt="Panel de monitorización de copias de seguridad con indicadores operativos, advertencias y errores"
+                >
+                <button class="project-preview__nav project-preview__nav--next" type="button" aria-label="Foto siguiente" data-i18n-aria="projectPreviewNext" data-project-preview-next hidden>›</button>
+            </div>
+        </dialog>
+    </body>
+</html>

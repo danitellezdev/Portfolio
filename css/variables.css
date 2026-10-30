@@ -1,0 +1,38 @@
+:root {
+    color-scheme: dark;
+    font-family: Inter, "Segoe UI", sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --color-background: #0e1419;
+    --color-surface: #182028;
+    --color-surface-raised: #222b33;
+    --color-text: #fcfcfa;
+    --color-muted: #b8bdc3;
+    --color-accent: #d78855;
+    --color-accent-secondary: #4f84b8;
+    --color-accent-contrast: #0e1419;
+    --color-border: rgb(224 232 239 / 12%);
+    --color-grid: rgb(224 232 239 / 5%);
+    --chain-color: #b8bdc3;
+    --page-gutter: clamp(1.25rem, 6vw, 6.5rem);
+    --content-width: 76rem;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body[data-theme="light"] {
+    color-scheme: light;
+    --color-background: #f5f7fa;
+    --color-surface: #ffffff;
+    --color-surface-raised: #edf1f5;
+    --color-text: #172436;
+    --color-muted: #5e6a78;
+    --color-accent: #315d83;
+    --color-accent-secondary: #557a98;
+    --color-accent-contrast: #ffffff;
+    --color-border: rgb(23 36 54 / 12%);
+    --color-grid: rgb(23 36 54 / 7%);
+    --chain-color: #5e6a78;
+}

@@ -1,0 +1,80 @@
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@keyframes indicator-pulse {
+    0%,
+    100% {
+        opacity: 0.45;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes indicator-float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes camera-breathe {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.012);
+    }
+}
+
+@keyframes ambient-light {
+    from {
+        opacity: 0.32;
+    }
+
+    to {
+        opacity: 0.44;
+    }
+}
+
+@keyframes monitor-light {
+    from {
+        opacity: 0.36;
+    }
+
+    to {
+        opacity: 0.48;
+    }
+}
+
+@keyframes editor-cursor-blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes portfolio-arrive {
+    from {
+        opacity: 0;
+        transform: translateY(1.25rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

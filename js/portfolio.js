@@ -844,24 +844,21 @@ export function initPortfolio() {
             contactStatus.textContent = dictionary.formSending;
 
             try {
+                formData.set("_subject", dictionary.emailSubject(name));
                 const response = await fetch(contactForm.action, {
                     method: "POST",
                     headers: {
                         Accept: "application/json",
                     },
-                    body: new URLSearchParams({
-                        name,
-                        email,
-                        message,
-                        _replyto: email,
-                        _subject: dictionary.emailSubject(name),
-                        _honey: String(formData.get("_honey") ?? ""),
-                    }),
+                    body: formData,
                 });
                 const result = await response.json();
 
-                if (!response.ok || ![true, "true"].includes(result.success)) {
-                    throw new Error(result.message || `FormSubmit returned HTTP ${response.status}.`);
+                if (!response.ok || result.ok !== true) {
+                    const detail = Array.isArray(result.errors)
+                        ? result.errors.map((item) => item.message).filter(Boolean).join(" ")
+                        : result.error || result.message;
+                    throw new Error(detail || `Formspree returned HTTP ${response.status}.`);
                 }
 
                 contactStatus.textContent = dictionary.formStatus;

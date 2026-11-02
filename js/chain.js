@@ -1,8 +1,7 @@
 const SEGMENTS = 10;
-const REST_LENGTH = 105;
+const REST_LENGTH = 90;
 const MAX_PULL = 70;
 const PULL_THRESHOLD = 45;
-const CONTAINER_WIDTH = 170;
 const CONTAINER_HEIGHT = 240;
 const STEP = 1000 / 60;
 const GRAVITY = 0.9;
@@ -28,10 +27,11 @@ export function initThemeChain({ slot, handle, portfolio, onToggle }) {
         return;
     }
 
-    const anchorX = CONTAINER_WIDTH / 2;
+    let containerWidth = window.innerWidth;
+    let anchorX = 0;
     const points = Array.from({ length: SEGMENTS + 1 }, (_, index) => {
         const y = (REST_LENGTH / SEGMENTS) * index;
-        return { x: anchorX, y, px: anchorX, py: y };
+        return { x: 0, y, px: 0, py: y };
     });
 
     let ratio = 1;
@@ -40,7 +40,7 @@ export function initThemeChain({ slot, handle, portfolio, onToggle }) {
     let dragging = false;
     let triggered = false;
     let grabOffset = { x: 0, y: 0 };
-    let target = { x: anchorX, y: REST_LENGTH };
+    let target = { x: 0, y: REST_LENGTH };
     let lastScroll = window.scrollY;
     let accumulator = 0;
     let lastTime = performance.now();
@@ -51,11 +51,20 @@ export function initThemeChain({ slot, handle, portfolio, onToggle }) {
 
     const resize = () => {
         const rect = slot.getBoundingClientRect();
-        container.style.left = `${rect.left + rect.width / 2 - CONTAINER_WIDTH / 2}px`;
+        const nextAnchorX = rect.left + rect.width / 2;
+        const anchorShift = nextAnchorX - anchorX;
+        anchorX = nextAnchorX;
+        containerWidth = window.innerWidth;
+        container.style.width = `${containerWidth}px`;
+        points.forEach((point) => {
+            point.x += anchorShift;
+            point.px += anchorShift;
+        });
+        target.x += anchorShift;
         ratio = Math.min(window.devicePixelRatio || 1, 2);
-        canvas.width = CONTAINER_WIDTH * ratio;
+        canvas.width = containerWidth * ratio;
         canvas.height = CONTAINER_HEIGHT * ratio;
-        canvas.style.width = `${CONTAINER_WIDTH}px`;
+        canvas.style.width = `${containerWidth}px`;
         canvas.style.height = `${CONTAINER_HEIGHT}px`;
     };
 
@@ -193,7 +202,6 @@ export function initThemeChain({ slot, handle, portfolio, onToggle }) {
 
         for (let index = 1; index <= SEGMENTS; index += 1) {
             const point = points[index];
-            point.x = clamp(point.x, 14, CONTAINER_WIDTH - 14);
             point.y = clamp(point.y, -10, CONTAINER_HEIGHT - 44);
         }
     };
@@ -223,7 +231,7 @@ export function initThemeChain({ slot, handle, portfolio, onToggle }) {
     const draw = () => {
         const color = getComputedStyle(document.body).getPropertyValue("--chain-color").trim() || "#b8bdc3";
         context.setTransform(ratio, 0, 0, ratio, 0, 0);
-        context.clearRect(0, 0, CONTAINER_WIDTH, CONTAINER_HEIGHT);
+        context.clearRect(0, 0, containerWidth, CONTAINER_HEIGHT);
         context.shadowColor = "rgb(0 0 0 / 28%)";
         context.shadowBlur = 4;
         context.shadowOffsetY = 2;

@@ -118,6 +118,7 @@ export function initPortfolio() {
             educationComplementaryTitle: "Formación complementaria",
             educationFinished: "Finalizado",
             educationCompleted: "Completado",
+            educationInProgress: "Cursando",
             educationDawTitle: "Desarrollo de Aplicaciones Web (DAW)",
             educationDawDescription: "Formación orientada al desarrollo de soluciones web modernas, combinando programación, bases de datos, diseño de interfaces y metodologías de desarrollo para crear aplicaciones funcionales y escalables.",
             educationJavascriptTitle: "Máster en JavaScript y Desarrollo Web Full-Stack",
@@ -126,6 +127,8 @@ export function initPortfolio() {
             educationFullStackDescription: "Formación práctica en desarrollo web completo, trabajando la comunicación entre cliente y servidor, bases de datos y la construcción de aplicaciones dinámicas.",
             educationJavaTitle: "Curso de Programación en Java",
             educationJavaDescription: "Formación en fundamentos de Java, programación orientada a objetos, estructuras de datos y buenas prácticas para el desarrollo de aplicaciones.",
+            educationPythonCopilotTitle: "Python + Copilot: Aprende a programar con IA",
+            educationPythonCopilotDescription: "Aprendizaje de Python combinado con el uso de GitHub Copilot para automatización, resolución de problemas y desarrollo asistido por inteligencia artificial.",
             skillsTitle: "Tecnologías y competencias",
             skillsLanguages: "Idiomas",
             skillResponsive: "Diseño responsive",
@@ -285,6 +288,7 @@ export function initPortfolio() {
             educationComplementaryTitle: "Additional education",
             educationFinished: "Completed",
             educationCompleted: "Completed",
+            educationInProgress: "In progress",
             educationDawTitle: "Web Application Development (DAW)",
             educationDawDescription: "Training focused on building modern web solutions, combining programming, databases, interface design, and development methodologies to create functional, scalable applications.",
             educationJavascriptTitle: "Master's in JavaScript and Full-Stack Web Development",
@@ -293,6 +297,8 @@ export function initPortfolio() {
             educationFullStackDescription: "Practical training in full-stack web development, covering client-server communication, databases, and building dynamic applications.",
             educationJavaTitle: "Java Programming Course",
             educationJavaDescription: "Training in Java fundamentals, object-oriented programming, data structures, and best practices for application development.",
+            educationPythonCopilotTitle: "Python + Copilot: Learn to Code with AI",
+            educationPythonCopilotDescription: "Learning Python alongside GitHub Copilot for automation, problem-solving, and AI-assisted development.",
             skillsTitle: "Technologies & competencies",
             skillsLanguages: "Languages",
             skillResponsive: "Responsive design",
@@ -356,6 +362,21 @@ export function initPortfolio() {
         });
 
         elements.forEach((element) => observer.observe(element));
+    }
+
+    const backToTop = document.querySelector("[data-back-to-top]");
+    const experienceSection = document.getElementById("experiencia");
+    if (backToTop instanceof HTMLAnchorElement && experienceSection instanceof HTMLElement) {
+        const updateBackToTopVisibility = () => {
+            backToTop.classList.toggle(
+                "is-visible",
+                experienceSection.getBoundingClientRect().top <= window.innerHeight,
+            );
+        };
+
+        window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+        window.addEventListener("resize", updateBackToTopVisibility);
+        updateBackToTopVisibility();
     }
 
     const themeToggle = document.querySelector(".chain-handle");
@@ -714,7 +735,7 @@ export function initPortfolio() {
         const stagger = 80;
         let isStacked = true;
 
-        const getPeek = () => (window.innerWidth <= 680 ? 6 : 26);
+        const getPeek = () => (window.innerWidth <= 680 ? 9 : 34);
 
         const applyArchiveState = () => {
             archive.classList.toggle("is-stacked", isStacked);

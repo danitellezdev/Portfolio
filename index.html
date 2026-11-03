@@ -45,9 +45,16 @@
 
             <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
                 <header class="site-header">
-                    <a class="wordmark" href="#intro" aria-label="Volver al inicio" data-i18n-aria="homeLabel">
-                        DT<span>.</span>
-                    </a>
+                    <div class="header-brand">
+                        <a class="wordmark" href="#intro" aria-label="Volver al inicio" data-i18n-aria="homeLabel">
+                            DT<span>.</span>
+                        </a>
+                        <nav class="header-quick-links" aria-label="Redes y currículum">
+                            <a href="https://www.linkedin.com/in/daniel-t%C3%A9llez-mart%C3%ADn-0aa8bb448/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            <a href="https://github.com/repos" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="assets/CV/CV-DaniTellez.pdf" download aria-label="Descargar CV" data-i18n-aria="cvDownload">CV</a>
+                        </nav>
+                    </div>
                     <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria="navLabel">
                         <a href="#experiencia" data-i18n="navExperience">Experiencia</a>
                         <a href="#proyectos" data-i18n="navProjects">Proyectos</a>
@@ -551,13 +558,11 @@
                             </form>
                             <aside class="contact-card reveal" aria-label="Información de contacto" data-i18n-aria="contactInfoLabel">
                                 <p class="eyebrow" data-i18n="contactSocialEyebrow">También puedes encontrarme en</p>
-                                <a class="contact-card__link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><span data-i18n="linkedinPlaceholder">LinkedIn · añadir perfil</span> <span aria-hidden="true">↗</span></a>
-                                <a class="contact-card__link" href="https://github.com/" target="_blank" rel="noreferrer"><span data-i18n="githubPlaceholder">GitHub · añadir perfil</span> <span aria-hidden="true">↗</span></a>
-                                <a class="contact-card__link" href="mailto:danitellez.dev@gmail.com">danitellez.dev@gmail.com <span aria-hidden="true">↗</span></a>
+                                <a class="contact-card__link" href="https://www.linkedin.com/in/daniel-t%C3%A9llez-mart%C3%ADn-0aa8bb448/" target="_blank" rel="noopener noreferrer"><span data-i18n="linkedinPlaceholder">LinkedIn</span> <span aria-hidden="true">↗</span></a>
+                                <a class="contact-card__link" href="https://github.com/repos" target="_blank" rel="noopener noreferrer"><span data-i18n="githubPlaceholder">GitHub</span> <span aria-hidden="true">↗</span></a>
                                 <div class="contact-card__footer">
                                     <span data-i18n="cvPrompt">¿Quieres conocer más?</span>
-                                    <button class="button button--secondary" type="button" disabled aria-describedby="cv-note"><span data-i18n="cvDownload">Descargar CV</span> <span aria-hidden="true">↓</span></button>
-                                    <small id="cv-note" data-i18n="cvNote">CV disponible próximamente</small>
+                                    <a class="button button--secondary" href="assets/CV/CV-DaniTellez.pdf" download><span data-i18n="cvDownload">Descargar CV</span> <span aria-hidden="true">↓</span></a>
                                 </div>
                             </aside>
                         </div>

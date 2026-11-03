@@ -25,6 +25,12 @@
     transition: background-color 300ms ease, border-color 300ms ease;
 }
 
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.7rem, 1.4vw, 1.25rem);
+}
+
 .wordmark {
     width: fit-content;
     font-size: 1.15rem;
@@ -33,6 +39,23 @@
 }
 
 .wordmark span {
+    color: var(--color-accent);
+}
+
+.header-quick-links {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-muted);
+    font-size: 0.68rem;
+    white-space: nowrap;
+}
+
+.header-quick-links a {
+    transition: color 180ms ease;
+}
+
+.header-quick-links a:hover {
     color: var(--color-accent);
 }
 
@@ -1641,12 +1664,27 @@ body[data-theme="light"] .profile-visual__caption {
 @media (max-width: 680px) {
     .site-header {
         min-height: 4.4rem;
-        grid-template-columns: 1fr auto auto;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "brand controls"
+            "nav nav";
         gap: 0.65rem;
         padding-inline: 1.1rem;
+        padding-block: 0.7rem;
+    }
+
+    .header-brand {
+        grid-area: brand;
+    }
+
+    .header-quick-links {
+        gap: 0.55rem;
+        font-size: 0.64rem;
     }
 
     .site-nav {
+        grid-area: nav;
+        justify-self: start;
         gap: 0.9rem;
         font-size: 0.7rem;
     }
@@ -1668,6 +1706,7 @@ body[data-theme="light"] .profile-visual__caption {
     }
 
     .header-controls {
+        grid-area: controls;
         gap: 0.35rem;
     }
 

@@ -170,7 +170,7 @@ export function initIntro() {
             return;
         }
 
-        transitionTimer = window.setTimeout(finishEntry, 1300);
+        transitionTimer = window.setTimeout(finishEntry, 2800);
     };
 
     const handleWheel = (event) => {

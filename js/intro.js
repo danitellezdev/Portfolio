@@ -9,6 +9,7 @@ export function initIntro() {
     const portfolio = document.querySelector("#portfolio");
     const homeButton = portfolio?.querySelector(".wordmark");
     const portfolioTitle = portfolio?.querySelector("#portfolio-title");
+    const skipLink = document.querySelector("[data-skip-to-content]");
 
     if (
         !(intro instanceof HTMLElement)
@@ -31,6 +32,7 @@ export function initIntro() {
     const compactViewport = window.matchMedia("(max-width: 1024px)");
     let entering = false;
     let entered = false;
+    let focusPortfolioAfterEntry = false;
     let transitionTimer = 0;
     let touchStartY = null;
     let typingTimer = 0;
@@ -147,12 +149,19 @@ export function initIntro() {
         entered = true;
         intro.classList.remove("is-entering");
         intro.classList.add("is-entered");
+        camera.style.removeProperty("transform");
+        camera.style.removeProperty("animation");
         intro.inert = true;
         portfolio.classList.add("is-entered");
+        portfolio.inert = false;
         window.scrollTo({ top: 0, behavior: "instant" });
 
-        if (portfolioTitle instanceof HTMLElement && intro.contains(document.activeElement)) {
+        if (
+            portfolioTitle instanceof HTMLElement
+            && (focusPortfolioAfterEntry || intro.contains(document.activeElement))
+        ) {
             portfolioTitle.focus({ preventScroll: true });
+            focusPortfolioAfterEntry = false;
         }
     };
 
@@ -163,14 +172,30 @@ export function initIntro() {
 
         entering = true;
         stopTyping();
-        intro.classList.add("is-entering");
 
         if (reducedMotion.matches) {
+            intro.classList.add("is-entering");
             finishEntry();
             return;
         }
 
-        transitionTimer = window.setTimeout(finishEntry, 2800);
+        const cameraTransform = getComputedStyle(camera).transform;
+        camera.style.animation = "none";
+        camera.style.transform = cameraTransform;
+        intro.classList.add("is-entering");
+        window.requestAnimationFrame(() => {
+            if (entering) {
+                camera.style.removeProperty("transform");
+            }
+        });
+
+        transitionTimer = window.setTimeout(finishEntry, 2100);
+    };
+
+    const handleCameraTransitionEnd = (event) => {
+        if (event.target === camera && event.propertyName === "transform") {
+            finishEntry();
+        }
     };
 
     const handleWheel = (event) => {
@@ -193,6 +218,17 @@ export function initIntro() {
         touchStartY = event.touches.length === 1 ? event.touches[0].clientY : null;
     };
 
+    const handleTouchMove = (event) => {
+        if (entering || entered || touchStartY === null || event.touches.length !== 1) {
+            return;
+        }
+
+        if (touchStartY - event.touches[0].clientY > 16) {
+            touchStartY = null;
+            enterPortfolio();
+        }
+    };
+
     const handleTouchEnd = (event) => {
         if (entered || touchStartY === null || event.changedTouches.length !== 1) {
             touchStartY = null;
@@ -212,6 +248,26 @@ export function initIntro() {
         enterPortfolio();
     };
 
+    const handleSkipToContent = (event) => {
+        event.preventDefault();
+
+        if (!(portfolioTitle instanceof HTMLElement)) {
+            return;
+        }
+
+        if (!entered) {
+            focusPortfolioAfterEntry = true;
+            enterPortfolio();
+            return;
+        }
+
+        portfolioTitle.focus({ preventScroll: true });
+        portfolioTitle.scrollIntoView({
+            behavior: reducedMotion.matches ? "instant" : "smooth",
+            block: "start",
+        });
+    };
+
     const handleHomeClick = (event) => {
         event.preventDefault();
 
@@ -225,6 +281,7 @@ export function initIntro() {
         intro.classList.remove("is-entered");
         intro.inert = false;
         intro.classList.add("is-entering");
+        portfolio.inert = true;
         portfolio.classList.remove("is-entered");
         window.scrollTo({ top: 0, behavior: "instant" });
         startTyping();
@@ -242,11 +299,16 @@ export function initIntro() {
 
     window.addEventListener("wheel", handleWheel, { passive: false });
     window.addEventListener("resize", updateEditorPosition, { passive: true });
+    if (skipLink instanceof HTMLAnchorElement) {
+        skipLink.addEventListener("click", handleSkipToContent);
+    }
+    camera.addEventListener("transitionend", handleCameraTransitionEnd);
     compactViewport.addEventListener("change", () => {
         startTyping();
     });
     image.addEventListener("load", updateEditorPosition, { once: true });
     stage.addEventListener("touchstart", handleTouchStart, { passive: true });
+    stage.addEventListener("touchmove", handleTouchMove, { passive: true });
     stage.addEventListener("touchend", handleTouchEnd, { passive: true });
     indicator?.addEventListener("click", handleIndicatorClick);
     homeButton.addEventListener("click", handleHomeClick);

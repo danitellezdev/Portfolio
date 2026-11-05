@@ -16,6 +16,7 @@
     </head>
     <body data-theme="dark">
         <main>
+            <a class="site-skip-link" href="#portfolio-title" data-skip-to-content data-i18n="skipToContent">Saltar al contenido</a>
             <section class="intro" id="intro" aria-label="Introducción" data-i18n-aria="introLabel">
                 <div class="intro-stage">
                     <div class="intro-camera" aria-hidden="true">
@@ -43,7 +44,7 @@
                 </div>
             </section>
 
-            <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
+            <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title" inert>
                 <header class="site-header">
                     <div class="header-brand">
                         <a class="wordmark" href="#intro" aria-label="Volver al inicio" data-i18n-aria="homeLabel">
@@ -220,7 +221,10 @@
                                     <h3 data-i18n="project1Title">Backup Monitor</h3>
                                     <p data-i18n="project1Description">Sistema de monitorización diseñado para ofrecer visibilidad completa sobre las copias de seguridad de los laboratorios. Automatiza la recopilación de datos, clasifica estados de funcionamiento, genera informes Excel y proporciona un panel web centralizado para detectar incidencias de forma rápida y eficiente.</p>
                                     <div class="tag-list"><span>Python</span><span>PowerShell</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>JSON</span><span>Excel</span></div>
-                                    <a class="project-link" href="assets/images/backup/completa_backup.png" data-project-preview data-project-gallery="backup" aria-haspopup="dialog"><span data-i18n="projectLink">Ver proyecto</span> <span aria-hidden="true">↗</span></a>
+                                    <div class="project-card__actions">
+                                        <a class="project-link" href="assets/images/backup/completa_backup.png" data-project-preview data-project-gallery="backup" aria-haspopup="dialog"><span data-i18n="projectLink">Ver proyecto</span> <span aria-hidden="true">↗</span></a>
+                                        <a class="project-link" href="https://github.com/danitellezdev/BackupMonitor" target="_blank" rel="noopener noreferrer"><span data-i18n="projectRepositoryLink">GitHub</span> <span aria-hidden="true">↗</span></a>
+                                    </div>
                                 </div>
                             </article>
                             <article class="project-card reveal">
@@ -241,6 +245,7 @@
                                     <div class="project-card__actions">
                                         <a class="project-link" href="assets/images/danitellez.es/danitellez.es_.png" data-project-preview data-project-gallery="danitellez" aria-haspopup="dialog"><span data-i18n="projectLink">Ver proyecto</span> <span aria-hidden="true">↗</span></a>
                                         <a class="project-link" href="https://danitellez.es/" target="_blank" rel="noopener noreferrer"><span data-i18n="projectWebsiteLink">Ver sitio</span> <span aria-hidden="true">↗</span></a>
+                                        <a class="project-link" href="https://github.com/danitellezdev/DaniTellez-Web" target="_blank" rel="noopener noreferrer"><span data-i18n="projectRepositoryLink">GitHub</span> <span aria-hidden="true">↗</span></a>
                                     </div>
                                 </div>
                             </article>
@@ -258,7 +263,10 @@
                                     <h3 data-i18n="project3Title">LiberArte</h3>
                                     <p data-i18n="project3Description">Aplicación web desarrollada para digitalizar y centralizar la gestión de un centro infantil de actividades artísticas. Incorpora distintos niveles de acceso, paneles personalizados y una arquitectura basada en API que conecta una interfaz moderna con un sistema de gestión completo para administradores, empleados y tutores.</p>
                                     <div class="tag-list"><span>Laravel</span><span>PHP</span><span>React</span><span>MySQL</span><span>Vite</span><span>API REST</span></div>
-                                    <a class="project-link" href="assets/images/liberarte/localhost_5173_.png" data-project-preview data-project-gallery="liberarte" aria-haspopup="dialog"><span data-i18n="projectLink">Ver proyecto</span> <span aria-hidden="true">↗</span></a>
+                                    <div class="project-card__actions">
+                                        <a class="project-link" href="assets/images/liberarte/localhost_5173_.png" data-project-preview data-project-gallery="liberarte" aria-haspopup="dialog"><span data-i18n="projectLink">Ver proyecto</span> <span aria-hidden="true">↗</span></a>
+                                        <a class="project-link" href="https://github.com/danitellezdev/LiberArte" target="_blank" rel="noopener noreferrer"><span data-i18n="projectRepositoryLink">GitHub</span> <span aria-hidden="true">↗</span></a>
+                                    </div>
                                 </div>
                             </article>
                             <article class="project-card reveal">
@@ -278,6 +286,7 @@
                                     <div class="project-card__actions">
                                         <a class="project-link" href="assets/images/verbquest/dominaverbos.png" data-project-preview data-project-gallery="verbquest" aria-haspopup="dialog"><span data-i18n="projectLink">Ver proyecto</span> <span aria-hidden="true">↗</span></a>
                                         <a class="project-link" href="https://danitellezdev.github.io/VerbQuest/" target="_blank" rel="noopener noreferrer"><span data-i18n="projectWebsiteLink">Ver sitio</span> <span aria-hidden="true">↗</span></a>
+                                        <a class="project-link" href="https://github.com/danitellezdev/VerbQuest" target="_blank" rel="noopener noreferrer"><span data-i18n="projectRepositoryLink">GitHub</span> <span aria-hidden="true">↗</span></a>
                                     </div>
                                 </div>
                             </article>
@@ -571,6 +580,11 @@
                     <footer class="site-footer">
                         <a class="wordmark" href="#portfolio" aria-label="Volver arriba" data-i18n-aria="backToTopLabel">DT<span>.</span></a>
                         <p><span data-i18n="footerCredit">Diseñado y construido con intención</span> <span>·</span> © <span data-current-year>2026</span> Daniel Téllez</p>
+                        <nav class="site-footer__legal" aria-label="Información legal" data-i18n-aria="footerLegalNavLabel">
+                            <a href="aviso-legal.html" data-i18n="footerLegalNotice" data-i18n-href="legalNoticeHref">Aviso Legal</a>
+                            <a href="privacidad.html" data-i18n="footerPrivacyPolicy" data-i18n-href="privacyPolicyHref">Política de Privacidad</a>
+                            <a href="cookies.html" data-i18n="footerCookiePolicy" data-i18n-href="cookiePolicyHref">Política de Cookies</a>
+                        </nav>
                         <a class="back-to-top" href="#portfolio" data-back-to-top><span data-i18n="footerBackToTop">Volver al inicio</span> ↑</a>
                     </footer>
                 </div>

@@ -1,7 +1,9 @@
 export const translations = {
     es: {
-        title: "Daniel Téllez — Desarrollador web",
-        metaDescription: "Daniel Téllez — desarrollo web e interfaces digitales.",
+        title: "Daniel Téllez | Desarrollador web y soporte IT en Andalucía",
+        metaDescription: "Portfolio de Daniel Téllez, desarrollador web y profesional de soporte IT en Andalucía. Explora proyectos, experiencia técnica, automatización y contacto.",
+        ogLocale: "es_ES",
+        ogLocaleAlternate: "en_US",
         legalNoticeHref: "aviso-legal.html",
         privacyPolicyHref: "privacidad.html",
         cookiePolicyHref: "cookies.html",
@@ -177,8 +179,10 @@ export const translations = {
         emailSubject: (name) => `Nuevo mensaje de ${name}`,
     },
     en: {
-        title: "Daniel Téllez — Web Developer",
-        metaDescription: "Daniel Téllez — web development and digital interfaces.",
+        title: "Daniel Téllez | Web Developer & IT Support",
+        metaDescription: "Daniel Téllez is a web developer and IT support professional in Andalucía, Spain. Explore his projects, technical experience, automation work, and contact details.",
+        ogLocale: "en_US",
+        ogLocaleAlternate: "es_ES",
         legalNoticeHref: "legal-notice.html",
         privacyPolicyHref: "privacy-policy.html",
         cookiePolicyHref: "cookie-policy.html",

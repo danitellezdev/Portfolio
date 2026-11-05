@@ -253,6 +253,18 @@ export function initPortfolio() {
         const dictionary = translations[language];
         document.documentElement.lang = language;
         document.title = dictionary.title;
+        const currentUrl = new URL(window.location.href);
+        if (language === "en") {
+            currentUrl.searchParams.set("lang", "en");
+        } else {
+            currentUrl.searchParams.delete("lang");
+        }
+        window.history.replaceState(null, "", `${currentUrl.pathname}${currentUrl.search}${currentUrl.hash}`);
+        const canonicalUrl = language === "en"
+            ? "https://danieltellez.dev/?lang=en"
+            : "https://danieltellez.dev/";
+        document.querySelector('link[rel="canonical"]')?.setAttribute("href", canonicalUrl);
+        document.querySelector('meta[property="og:url"]')?.setAttribute("content", canonicalUrl);
 
         document.querySelectorAll("[data-i18n]").forEach((element) => {
             const key = element.dataset.i18n;
@@ -267,6 +279,14 @@ export function initPortfolio() {
             const translation = dictionary[key];
             if (typeof translation === "string") {
                 element.setAttribute("aria-label", translation);
+            }
+        });
+
+        document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+            const key = element.dataset.i18nAlt;
+            const translation = dictionary[key];
+            if (typeof translation === "string") {
+                element.setAttribute("alt", translation);
             }
         });
 
@@ -286,11 +306,13 @@ export function initPortfolio() {
             }
         });
 
-        const description = document.querySelector('meta[name="description"]');
-        const translatedDescription = description?.dataset.i18nContent;
-        if (description instanceof HTMLMetaElement && translatedDescription) {
-            description.content = dictionary[translatedDescription];
-        }
+        document.querySelectorAll("meta[data-i18n-content]").forEach((element) => {
+            const key = element.dataset.i18nContent;
+            const translation = dictionary[key];
+            if (element instanceof HTMLMetaElement && typeof translation === "string") {
+                element.content = translation;
+            }
+        });
 
         if (languageToggle instanceof HTMLButtonElement && languageLabel instanceof HTMLElement) {
             const targetLanguage = language === "es" ? "en" : "es";

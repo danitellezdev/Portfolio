@@ -80,6 +80,20 @@
     color: var(--color-accent);
 }
 
+.header-quick-links button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    transition: color 180ms ease;
+}
+
+.header-quick-links button:hover {
+    color: var(--color-accent);
+}
+
 .site-nav {
     display: flex;
     align-items: center;
@@ -1016,6 +1030,68 @@ body[data-theme="light"] .profile-visual__caption {
     font-weight: 600;
 }
 
+.cv-download-dialog {
+    position: fixed;
+    width: min(28rem, calc(100vw - 2rem));
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background: var(--color-surface);
+    box-shadow: 0 1.5rem 5rem rgb(0 0 0 / 45%);
+    color: var(--color-text);
+}
+
+.cv-download-dialog::backdrop {
+    background: rgb(5 9 13 / 75%);
+    backdrop-filter: blur(5px);
+}
+
+.cv-download-dialog__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.cv-download-dialog__header h2 {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 1.1rem;
+}
+
+.cv-download-dialog__description {
+    margin: 0.75rem 0 1.25rem;
+    color: var(--color-muted);
+    font-size: 0.88rem;
+}
+
+.cv-download-dialog__actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.cv-download-dialog__link {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 999px;
+    background: var(--color-accent);
+    color: var(--color-accent-contrast);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: filter 180ms ease, transform 180ms ease;
+}
+
+.cv-download-dialog__link:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
 .skill-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1397,14 +1473,15 @@ body[data-theme="light"] .profile-visual__caption {
     bottom: clamp(1rem, 3vh, 2rem);
     display: inline-flex;
     align-items: center;
-    gap: 0.45rem;
-    padding: 0.7rem 1rem;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0.35rem;
     border: 1px solid var(--color-border);
-    border-radius: 999px;
+    border-radius: 50%;
     background: color-mix(in srgb, var(--color-surface) 92%, transparent);
     box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 22%);
     color: var(--color-text);
-    font-size: 0.76rem;
     opacity: 0;
     pointer-events: none;
     transform: translateY(0.6rem);
@@ -1416,6 +1493,12 @@ body[data-theme="light"] .profile-visual__caption {
         border-color 220ms ease,
         color 180ms ease;
     visibility: hidden;
+}
+
+.back-to-top span {
+    font-size: 0.8rem;
+    font-weight: 650;
+    white-space: nowrap;
 }
 
 .back-to-top.is-visible {

@@ -1,0 +1,15 @@
+{
+    "name": "Daniel Téllez | Web Developer, IT Support & Automation",
+    "short_name": "Daniel Téllez",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0e1419",
+    "theme_color": "#0e1419",
+    "icons": [
+        {
+            "src": "/assets/icons/dt-logo.png",
+            "sizes": "768x768",
+            "type": "image/png"
+        }
+    ]
+}

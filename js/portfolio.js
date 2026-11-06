@@ -43,6 +43,9 @@ export function initPortfolio() {
     const themeIcon = themeToggle?.querySelector(".chain-handle__icon");
     const languageToggle = document.querySelector(".language-toggle");
     const languageLabel = languageToggle?.querySelector(".language-toggle__label");
+    const cvDownloadDialog = document.querySelector("[data-cv-download-dialog]");
+    const cvDownloadTriggers = document.querySelectorAll("[data-cv-download-trigger]");
+    const cvDownloadClose = cvDownloadDialog?.querySelector("[data-cv-download-close]");
     const projectPreviewDialog = document.querySelector("[data-project-preview-dialog]");
     const projectPreviewImage = projectPreviewDialog?.querySelector(".project-preview__image");
     const projectPreviewZoom = projectPreviewDialog?.querySelector("[data-project-preview-zoom]");
@@ -335,6 +338,33 @@ export function initPortfolio() {
     if (languageToggle instanceof HTMLButtonElement) {
         languageToggle.addEventListener("click", () => {
             setLanguage(currentLanguage === "es" ? "en" : "es");
+        });
+    }
+
+    if (
+        cvDownloadDialog instanceof HTMLDialogElement
+        && cvDownloadClose instanceof HTMLButtonElement
+    ) {
+        cvDownloadTriggers.forEach((trigger) => {
+            if (!(trigger instanceof HTMLButtonElement)) {
+                return;
+            }
+
+            trigger.addEventListener("click", () => {
+                if (!cvDownloadDialog.open) {
+                    cvDownloadDialog.showModal();
+                }
+            });
+        });
+
+        cvDownloadClose.addEventListener("click", () => {
+            cvDownloadDialog.close();
+        });
+
+        cvDownloadDialog.addEventListener("click", (event) => {
+            if (event.target === cvDownloadDialog) {
+                cvDownloadDialog.close();
+            }
         });
     }
 

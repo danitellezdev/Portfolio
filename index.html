@@ -4,10 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#0e1419">
+        <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" sizes="any">
+        <link rel="icon" type="image/png" href="assets/icons/dt-logo.png" sizes="768x768">
+        <link rel="apple-touch-icon" href="assets/icons/dt-logo.png">
+        <link rel="manifest" href="/manifest.webmanifest">
         <meta
             name="description"
-            content="Portfolio de Daniel Téllez, desarrollador web y profesional de soporte IT en Andalucía. Explora proyectos, experiencia técnica, automatización y contacto."
-            data-i18n-content="metaDescription"
+            content="Portfolio profesional de Daniel Téllez. Desarrollo web, soporte IT, automatización de procesos y soluciones digitales."
         >
         <meta name="robots" content="index,follow,max-image-preview:large">
         <link rel="canonical" href="https://danieltellez.dev/">
@@ -16,21 +19,22 @@
         <link rel="alternate" hreflang="x-default" href="https://danieltellez.dev/">
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Daniel Téllez">
-        <meta property="og:title" content="Daniel Téllez | Desarrollador web y soporte IT en Andalucía" data-i18n-content="title">
-        <meta property="og:description" content="Portfolio de Daniel Téllez, desarrollador web y profesional de soporte IT en Andalucía. Explora proyectos, experiencia técnica, automatización y contacto." data-i18n-content="metaDescription">
+        <meta property="og:title" content="Daniel Téllez | Web Developer, IT Support &amp; Automation">
+        <meta property="og:description" content="Portfolio profesional de Daniel Téllez. Desarrollo web, soporte IT, automatización de procesos y soluciones digitales.">
         <meta property="og:url" content="https://danieltellez.dev/">
         <meta property="og:locale" content="es_ES" data-i18n-content="ogLocale">
         <meta property="og:locale:alternate" content="en_US" data-i18n-content="ogLocaleAlternate">
         <meta property="og:image" content="https://danieltellez.dev/assets/images/pc_setup.png">
-        <meta property="og:image:alt" content="Vista del portfolio web de Daniel Téllez en un escritorio">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:alt" content="Captura del portfolio profesional de Daniel Téllez">
         <meta property="og:image:width" content="1918">
         <meta property="og:image:height" content="911">
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Daniel Téllez | Desarrollador web y soporte IT en Andalucía" data-i18n-content="title">
-        <meta name="twitter:description" content="Portfolio de Daniel Téllez, desarrollador web y profesional de soporte IT en Andalucía. Explora proyectos, experiencia técnica, automatización y contacto." data-i18n-content="metaDescription">
+        <meta name="twitter:title" content="Daniel Téllez | Web Developer, IT Support &amp; Automation">
+        <meta name="twitter:description" content="Portfolio profesional de Daniel Téllez. Desarrollo web, soporte IT, automatización de procesos y soluciones digitales.">
         <meta name="twitter:image" content="https://danieltellez.dev/assets/images/pc_setup.png">
-        <meta name="twitter:image:alt" content="Vista del portfolio web de Daniel Téllez en un escritorio">
-        <title>Daniel Téllez | Desarrollador web y soporte IT en Andalucía</title>
+        <meta name="twitter:image:alt" content="Captura del portfolio profesional de Daniel Téllez">
+        <title>Daniel Téllez | Web Developer, IT Support &amp; Automation</title>
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -49,7 +53,7 @@
                         "@type": "ProfilePage",
                         "@id": "https://danieltellez.dev/#profile",
                         "url": "https://danieltellez.dev/",
-                        "name": "Daniel Téllez | Desarrollador web y soporte IT en Andalucía",
+                        "name": "Daniel Téllez | Web Developer, IT Support & Automation",
                         "isPartOf": {
                             "@id": "https://danieltellez.dev/#website"
                         },
@@ -65,8 +69,8 @@
                         "alternateName": "Daniel Tellez",
                         "url": "https://danieltellez.dev/",
                         "image": "https://danieltellez.dev/assets/images/Perfil1.png",
-                        "jobTitle": "Desarrollador web y profesional de soporte IT",
-                        "description": "Desarrollador web y profesional de soporte IT en Andalucía, España.",
+                        "jobTitle": "Web Developer, IT Support & Automation",
+                        "description": "Portfolio profesional de Daniel Téllez. Desarrollo web, soporte IT, automatización de procesos y soluciones digitales.",
                         "email": "danitellez.dev@gmail.com",
                         "address": {
                             "@type": "PostalAddress",
@@ -134,7 +138,7 @@
                         <nav class="header-quick-links" aria-label="Redes y currículum">
                             <a href="https://www.linkedin.com/in/daniel-t%C3%A9llez-mart%C3%ADn-0aa8bb448/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                             <a href="https://github.com/repos" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            <a href="assets/CV/CV-DaniTellez.pdf" download aria-label="Descargar CV" data-i18n-aria="cvDownload">CV</a>
+                            <button type="button" aria-label="Descargar CV" data-i18n-aria="cvDownload" aria-haspopup="dialog" aria-controls="cv-download-dialog" data-cv-download-trigger>CV</button>
                         </nav>
                     </div>
                     <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria="navLabel">
@@ -668,7 +672,7 @@
                                 <a class="contact-card__link" href="https://github.com/danitellezdev" target="_blank" rel="noopener noreferrer"><span data-i18n="githubPlaceholder">GitHub</span> <span aria-hidden="true">↗</span></a>
                                 <div class="contact-card__footer">
                                     <span data-i18n="cvPrompt">¿Quieres conocer más?</span>
-                                    <a class="button button--secondary" href="assets/CV/CV-DaniTellez.pdf" download><span data-i18n="cvDownload">Descargar CV</span> <span aria-hidden="true">↓</span></a>
+                                    <button class="button button--secondary" type="button" aria-haspopup="dialog" aria-controls="cv-download-dialog" data-cv-download-trigger><span data-i18n="cvDownload">Descargar CV</span> <span aria-hidden="true">↓</span></button>
                                 </div>
                             </aside>
                         </div>
@@ -682,7 +686,9 @@
                             <a href="privacidad.html" data-i18n="footerPrivacyPolicy" data-i18n-href="privacyPolicyHref">Política de Privacidad</a>
                             <a href="cookies.html" data-i18n="footerCookiePolicy" data-i18n-href="cookiePolicyHref">Política de Cookies</a>
                         </nav>
-                        <a class="back-to-top" href="#portfolio" data-back-to-top><span data-i18n="footerBackToTop">Volver al inicio</span> ↑</a>
+                        <a class="back-to-top" href="#portfolio" aria-label="Volver al inicio" data-i18n-aria="homeButtonLabel" data-back-to-top>
+                            <span data-i18n="homeButtonLabel">Inicio</span>
+                        </a>
                     </footer>
                 </div>
             </section>
@@ -700,6 +706,23 @@
                     alt="Panel de monitorización de copias de seguridad con indicadores operativos, advertencias y errores"
                 >
                 <button class="project-preview__nav project-preview__nav--next" type="button" aria-label="Foto siguiente" data-i18n-aria="projectPreviewNext" data-project-preview-next hidden>›</button>
+            </div>
+        </dialog>
+        <dialog class="cv-download-dialog" id="cv-download-dialog" aria-labelledby="cv-download-title" data-cv-download-dialog>
+            <div class="cv-download-dialog__header">
+                <h2 id="cv-download-title" data-i18n="cvDownloadDialogTitle">Elige el idioma</h2>
+                <button class="project-preview__close" type="button" aria-label="Cerrar selector de idioma" data-i18n-aria="cvDownloadCloseLabel" data-cv-download-close>×</button>
+            </div>
+            <p class="cv-download-dialog__description" data-i18n="cvDownloadDialogDescription">Selecciona la versión del CV que quieres descargar.</p>
+            <div class="cv-download-dialog__actions">
+                <a class="cv-download-dialog__link" href="assets/CV/CV-DaniTellez-ATS-DRAFT-ES.pdf" download="CV-DaniTellez-Espanol.pdf" lang="es">
+                    <span data-i18n="cvDownloadSpanish">Español</span>
+                    <span aria-hidden="true">↓</span>
+                </a>
+                <a class="cv-download-dialog__link" href="assets/CV/CV-DaniTellez-ATS-DRAFT.pdf" download="CV-DaniTellez-English.pdf" lang="en">
+                    <span data-i18n="cvDownloadEnglish">Inglés</span>
+                    <span aria-hidden="true">↓</span>
+                </a>
             </div>
         </dialog>
     </body>

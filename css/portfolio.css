@@ -1200,8 +1200,14 @@ body[data-theme="light"] .profile-visual__caption {
     justify-content: start;
 }
 
-.education-grid--complementary {
+.education-grid--complementary,
+.education-grid--certifications {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.education-grid--complementary .education-card,
+.education-grid--certifications .education-card {
+    min-height: 17rem;
 }
 
 .education-card {
@@ -1573,9 +1579,11 @@ body[data-theme="light"] .profile-visual__caption {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .education-grid--complementary {
+    .education-grid--complementary,
+    .education-grid--certifications {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
 }
 
 @media
